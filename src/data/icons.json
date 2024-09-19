@@ -1,0 +1,33 @@
+{
+    "icons": [
+        {
+            "icon": "icon-facebook",
+            "title": "facebook"
+        },
+        {
+            "icon": "icon-instagram",
+            "title": "instagram"
+        },
+        {
+            "icon": "icon-linkedin",
+            "title": "linkedin"
+        },
+        {
+            "icon": "icons-youtube",
+            "title": "youtube"
+        },
+        {
+            "icon": "icons-twitter",
+            "title": "twitter"
+        },
+        {
+            "icon": "icon-whatsapp",
+            "title": "whatsapp"
+        },
+        {
+            "icon": "icon-rest-api",
+            "title": "rest api"
+        }
+
+    ]
+}

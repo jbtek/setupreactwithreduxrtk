@@ -44,3 +44,11 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+## Setup react-redux and RTK(Redux toolkit query)
+  1. npm install @reduxjs/toolkit react-redux
+  2. Configure store using @reduxjs/toolkit
+  3. export RootState as typescript type, it can be used as typesafe and correct slicing of state.
+  4. export AppDispatch as action dispatcher type, it can be used as typesafe
+  5. give this store to React-redux provider and wrap App component to <Provider store={store}>children</Povider>
