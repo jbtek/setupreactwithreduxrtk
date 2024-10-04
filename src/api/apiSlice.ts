@@ -12,12 +12,13 @@ import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react';
 
 export const apiSlice = createApi({
     reducerPath:'api',
-    baseQuery: fetchBaseQuery({baseUrl: '/fakeApi'}),
+    baseQuery: fetchBaseQuery({baseUrl: '/'}),
     endpoints: builder => ({
-        getPosts: builder.query<any, void>({
-            query: () => '/posts',
+        //builder.query takes two types query<ResultType, ArgumentType>
+        getIcons: builder.query<any, void>({
+            query: () => '/icons',
         })
     })
 })
 
-export const {useGetPostsQuery} = apiSlice;
+export const {useGetIconsQuery} = apiSlice;

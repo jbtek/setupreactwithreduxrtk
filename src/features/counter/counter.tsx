@@ -1,7 +1,6 @@
-import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
 import { decrement, increment } from './counterSlice'
 import { RootState } from '../../store/store'
+import { useAppDispatch, useAppSelector } from '../../custom-hooks/useReduxHooks'
 
 /**
  * 
@@ -13,21 +12,19 @@ import { RootState } from '../../store/store'
  */
 
 export const Counter:React.FC = () => {
-  const count = useSelector((state: RootState) => state.counter.value)
-  const dispatch = useDispatch()
+  const count = useAppSelector((state: RootState) => state.counter.value)
+  const dispatch = useAppDispatch()
   console.log('HHIII counter rendering::')
   return (
     <div>
       <div>
         <button
-          aria-babel="Increment value"
           onClick={() => dispatch(increment())}
         >
           Increment
         </button>
         <span>{count}</span>
         <button
-          aria-label="Decrement value"
           onClick={() => dispatch(decrement())}
         >
           Decrement

@@ -1,8 +1,9 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
 import { Counter } from './features/counter/counter';
 import withLogger from './common/hoc/logger';
+import { Icons } from './features/icons/Icons';
+import { useGetIconsQuery } from './api/apiSlice';
+import withLoaderAndErrorHandling from './common/hoc/loader';
 
 function App() {
   /**
@@ -13,12 +14,13 @@ function App() {
    */
   //Always keep HOC component in Capital letter otherwise it will show this error TS2339 insrtict type error.
   const WithLoggerCounter = withLogger(Counter);
+  const WithLoading = withLoaderAndErrorHandling(Icons);
+  const {data, isLoading, error} = useGetIconsQuery();
   return (
     <div className="App">
       <header>App Badges</header>
-      <WithLoggerCounter>
-        <div>JAY</div>
-      </WithLoggerCounter>
+      <WithLoggerCounter/>
+      <WithLoading loading={isLoading} icons={data} err={error} />
     </div>
   );
 }
