@@ -11,7 +11,7 @@ import { useAppDispatch, useAppSelector } from '../../custom-hooks/useReduxHooks
   useReduxContext: Get access to the Redux context (rarely needed).
  */
 
-export const Counter:React.FC = () => {
+const Counter:React.FC = () => {
   const count = useAppSelector((state: RootState) => state.counter.value)
   const dispatch = useAppDispatch()
   console.log('HHIII counter rendering::')
@@ -33,3 +33,5 @@ export const Counter:React.FC = () => {
     </div>
   )
 }
+
+export default Counter

@@ -1,0 +1,13 @@
+.nav-link-header{
+    display: flex;
+    justify-content: flex-start;
+    background: burlywood;
+    &__list{
+        list-style: none;
+        width: 200px;
+        height: 40px;
+        text-decoration: solid;
+        display: flex;
+        align-items: center;
+    }
+}

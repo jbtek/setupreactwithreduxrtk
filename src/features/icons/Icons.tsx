@@ -3,7 +3,7 @@ interface IconsInterface{
     icons:[]
 }
 
-export const Icons = (props:IconsInterface) => {
+const Icons = (props:IconsInterface) => {
     const {icons} = props;
     return ( 
         <div>
@@ -11,6 +11,8 @@ export const Icons = (props:IconsInterface) => {
         </div>
     )
 }
+
+export default Icons
 
 //we can use above OR either this one
 // export const Icons: React.FC<IconsInterface> = ({icons}) => {
