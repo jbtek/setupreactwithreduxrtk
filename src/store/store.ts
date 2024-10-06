@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
-import counterSlice from "../features/counter/counterSlice";
-import { apiSlice } from "../api/apiSlice";
+import counterSlice from "../molecules/counter/counterSlice";
 import { loggerMiddleware } from "./middleware";
+import { apiSlice } from "../api/apiSlice";
 
 export const store = configureStore({
     reducer:{

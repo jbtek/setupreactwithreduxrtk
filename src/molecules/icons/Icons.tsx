@@ -1,14 +1,28 @@
+import Icon from "../../common/icon/Icon";
+
 // IconsInterface & React.PropsWithChildren<IconsInterface> if we are passing ref, key etc.. 
 interface IconsInterface{
-    icons:[]
+    icons:Icon[]
+}
+
+interface Icon {
+    title:string
+    id:string
+    icon:string
 }
 
 const Icons = (props:IconsInterface) => {
     const {icons} = props;
     return ( 
-        <div>
-            {icons}
-        </div>
+            <ul>
+            {
+                icons.map(val => (
+                        <Icon {...val}/>
+                    )
+                )
+            }
+            
+        </ul>
     )
 }
 

@@ -15,7 +15,7 @@ function withLoaderAndErrorHandling<P>(WrappedComponent: React.ComponentType<P>)
             return <div>Loading component show...</div>
         }
         if(err){
-            return <div>Error in showing view...</div>
+            return <div>Error showing view...</div>
         }
         return <WrappedComponent {...props} />
     };

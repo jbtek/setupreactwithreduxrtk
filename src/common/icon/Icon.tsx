@@ -1,5 +1,9 @@
-const Icon = () => {
+const Icon = (props: { title: string, icon: string, id: string }) => {
     return (
-    <span>icon 1</span>
+            <div className="icon">
+                <img loading="lazy" src={`${process.env.REACT_APP_ICON_URL}${props.icon}.png`}/>
+            </div>
     )
 }
+
+export default Icon;
